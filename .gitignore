@@ -1,0 +1,5 @@
+/.vscode/*.json
+/bin/Debug/netcoreapp2.0/*.json
+/obj/Debug/netcoreapp2.0
+/obj
+/bin/Debug/netcoreapp2.0
