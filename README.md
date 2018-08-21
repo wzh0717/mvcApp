@@ -1,2 +1,1 @@
-# mvcApp
-asp.net core mvc 
+# asp.net core mvc 相关应用
