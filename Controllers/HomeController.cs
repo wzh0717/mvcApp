@@ -11,7 +11,7 @@ namespace mvcApp.Controllers
 {
     public class HomeController : Controller
     {
-      IHttpClientFactory httpClientFactory;             
+    //  IHttpClientFactory httpClientFactory;             
         public IActionResult Index()
         {
            // var client=httpClientFactory.CreateClient();
