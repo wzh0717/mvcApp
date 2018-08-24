@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Hosting.WindowsServices;
 
 namespace mvcApp
 {
@@ -14,13 +15,13 @@ namespace mvcApp
     {
         public static void Main(string[] args)
         {
-            var config = new ConfigurationBuilder()
-               .SetBasePath(Directory.GetCurrentDirectory())
-               .AddJsonFile("hosting.json", true)
-               .Build();
+            // var config = new ConfigurationBuilder()
+            //    .SetBasePath(Directory.GetCurrentDirectory())
+            //    .AddJsonFile("hosting.json", true)
+            //    .Build();
 
             //BuildWebHost(args, config).Run();
-            BuildWebHost(args).Run();
+             BuildWebHost(args).Run();
         }
 
         public static IWebHost BuildWebHost(string[] args /*, IConfiguration config*/) =>
@@ -29,7 +30,7 @@ namespace mvcApp
                 .UseUrls("http://*:5001", "http://*:5002")
                 //  .UseConfiguration(config)
                 //.UseHttpSys()
-                .UseIISIntegration()
+                // .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
     }
